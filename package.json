@@ -1,0 +1,27 @@
+{
+  "name": "my-better-t-app2",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
+    "dev:native": "turbo -F native dev",
+    "dev:web": "turbo -F web dev"
+  },
+  "dependencies": {
+    "@my-better-t-app2/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@my-better-t-app2/config": "workspace:*",
+    "turbo": "^2.8.12",
+    "typescript": "^6"
+  },
+  "packageManager": "pnpm@11.1.1"
+}
